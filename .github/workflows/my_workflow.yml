@@ -1,0 +1,18 @@
+name : Panji Belajar Deploy
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  first:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: test deploy dev
+      uses: appleboy/ssh-action@master
+      with:
+        host: kristomoyo.com
+        username: root
+        key: ${{ secrets.MY_KEY }}
+        port: 22
+        script: |
