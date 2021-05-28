@@ -11,10 +11,10 @@ jobs:
     - name: test deploy dev
       uses: appleboy/ssh-action@master
       with:
-        host: kristomoyo.com
+        host: ${{ secrets.HOST_KRIS }}
         username: root
         key: ${{ secrets.MY_KEY }}
-        port: 22
+        port: ${{ secrets.PORTO }}
         script: |
           cd /home/admin/web/dev.panjibaskoro.web.id/public_html
           git pull origin develop
