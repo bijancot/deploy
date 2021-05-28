@@ -5,7 +5,7 @@ on:
 
 jobs:
   first:
-    name: Deploy
+    name: Pull from github
     runs-on: ubuntu-latest
     steps:
     - name: test deploy dev
@@ -16,3 +16,5 @@ jobs:
         key: ${{ secrets.MY_KEY }}
         port: 22
         script: |
+        cd /home/admin/web/dev.panjibaskoro.web.id/public_html
+        git pull origin develop
