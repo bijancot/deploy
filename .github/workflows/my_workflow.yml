@@ -15,4 +15,6 @@ jobs:
         username: root
         key: ${{ secrets.MY_KEY }}
         port: 22
-        script: whoami
+        script: |
+          cd /home/admin/web/dev.panjibaskoro.web.id/public_html
+          git pull origin develop
