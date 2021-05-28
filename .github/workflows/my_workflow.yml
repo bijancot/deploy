@@ -1,11 +1,11 @@
-name : Panji Belajar Deploy
+name : Panji Belajar Deploy 
 on:
   push:
-    branches: [develop]
+    branches: [ develop ]
 
 jobs:
   first:
-    name: Deploy
+    name: Pull from github
     runs-on: ubuntu-latest
     steps:
     - name: test deploy dev
@@ -15,4 +15,4 @@ jobs:
         username: root
         key: ${{ secrets.MY_KEY }}
         port: 22
-        script: |
+        script: whoami
